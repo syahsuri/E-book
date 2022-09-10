@@ -1,0 +1,34 @@
+
+.image{
+    height: 270px;
+    background-image: url('/img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card{
+    height: auto;
+    border:none;
+    background-color: #f4f4f5;
+}
+
+.card-body{
+    padding-left:30px ;
+    padding-right: 40px;
+    margin-top: 10px;
+}
+
+.caption{
+    padding: 60px;
+    padding-left: 110px;
+}
+
+.pelajaran{
+    justify-content: space-between;
+
+}
+
+.btn-pelajari{
+    background-color: #3c90d6;
+    color: white;
+}
