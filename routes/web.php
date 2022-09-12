@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('article');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+});
+
+Route::get('/dashboard/mahasiswa/list-mahasiswa', function () {
+    return view('dashboard.mahasiswa.index');
+});
+
