@@ -25,3 +25,14 @@ Route::get('/dashboard/mahasiswa/list-mahasiswa', function () {
     return view('dashboard.mahasiswa.index');
 });
 
+Route::get('/dashboard/mahasiswa/list-mahasiswa/create', function () {
+    return view('dashboard.mahasiswa.create');
+});
+
+Route::get('/dashboard/mahasiswa/list-mahasiswa/edit', function () {
+    return view('dashboard.mahasiswa.edit');
+});
+
+Route::get('/dashboard/mahasiswa/progress-mahasiswa', function () {
+    return view('dashboard.progress.index');
+});

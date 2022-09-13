@@ -31,8 +31,8 @@
           </li>
         </ul>
         <ul class="menu-sub">
-          <li class="menu-item {{ Request::is('dashboard/mahasiswa/list-mahasiswa*') ? 'active' : '' }}">
-            <a href="/dashboard/mahasiswa/list-mahasiswa" class="menu-link">
+          <li class="menu-item {{ Request::is('dashboard/mahasiswa/progress-mahasiswa*') ? 'active' : '' }}">
+            <a href="/dashboard/mahasiswa/progress-mahasiswa" class="menu-link">
               <div data-i18n="solusi">Progres Mahasiswa</div>
             </a>
           </li>
