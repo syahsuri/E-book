@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+
+
+Route::get('/article', function () {
     return view('article');
 });
+
+Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
@@ -43,4 +50,15 @@ Route::get('/dashboard/mahasiswa/list-mahasiswa/edit', function () {
 
 Route::get('/dashboard/mahasiswa/progress-mahasiswa', function () {
     return view('dashboard.progress.index');
+});
+
+Route::controller(RegisterController::class)->group(function () {
+    Route::get('/register', 'index');
+    Route::post('/register', 'store');
+});
+
+Route::controller(LoginController::class)->group(function () {
+    Route::get('/', 'index')->middleware('guest');
+    Route::post('/login', 'authenticate');
+    Route::post('/logout', 'logout');
 });

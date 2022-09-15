@@ -1,0 +1,28 @@
+
+
+
+.ul{
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+    list-style: none;
+}
+
+.li{
+    padding: 15px;
+}
+
+.a{
+    text-decoration: none;
+    color: rgba(23, 23, 23, 0.745);
+}
+
+.a:hover{
+    color: black;
+}
+
+.row{
+    padding-top: 13px;
+    padding-left: 70px;
+    padding-right: 55px;
+}

@@ -19,9 +19,7 @@
                                 <th>#</th>
                                 <th>NIM</th>
                                 <th>Nama</th>
-                                <th>Email</th>
                                 <th>Asal Sekolah</th>
-                                <th>No telp</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -30,9 +28,7 @@
                                 <td>1</td>
                                 <td>2020573010006</td>
                                 <td>Alvin Syahri</td>
-                                <td>alvinsyahri080@gmail.com</td>
                                 <td>Politeknik Negeri Lhoksemawe</td>
-                                <td>082383974449</td>
                                 <td>
                                     <button class="btn btn-sm btn-dark" data-bs-toggle="modal"
                                         data-bs-target="#modalResetPassword">

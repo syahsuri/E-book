@@ -1,15 +1,23 @@
 <nav class="navbar navbar-expand-lg">
    <div class="container">
-   <a class="navbar-brand fw-bold" href="#">TANYO <span>MERNO</span></a>
+   <a class="navbar-brand fw-bold" href="#">TANYO <span>MURUNO</span></a>
    <ul class="nav justify-content-end">
-   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Username</a>
+
+  @auth 
+  
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">{{ auth()->user()->nama }}</a>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Profile</a></li>
-      <li><a class="dropdown-item" href="#">Logout</a></li>
+      <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill"></i> Profile</a></li>
+      <li>
+        <form action="/logout" method="post">
+          @csrf
+          <button type="submit" class=" dropdown-item"><i class="bi bi-box-arrow-left"></i> Logout</a></button>
+        </form>
     </ul>
   </li>
-
-   </ul>
+  
+  @endauth
+    </ul>
    </div>
 </nav>
