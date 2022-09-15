@@ -25,6 +25,14 @@ Route::get('/dashboard/mahasiswa/list-mahasiswa', function () {
     return view('dashboard.mahasiswa.index');
 });
 
+Route::get('/dashboard/progress/materi-1', function () {
+    return view('dashboard.materi1.index');
+});
+
+Route::get('/dashboard/progress/materi-2', function () {
+    return view('dashboard.materi2.index');
+});
+
 Route::get('/dashboard/mahasiswa/list-mahasiswa/create', function () {
     return view('dashboard.mahasiswa.create');
 });

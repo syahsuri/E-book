@@ -30,10 +30,26 @@
             </a>
           </li>
         </ul>
+      </li>
+
+      {{-- Progress --}}
+      <li class="menu-item {{ Request::is('dashboard/progress*') ? 'active open' : '' }}">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="fa-duotone fa-user me-3"></i>
+          <div data-i18n="progress">Progress</div>
+        </a>
+
         <ul class="menu-sub">
-          <li class="menu-item {{ Request::is('dashboard/mahasiswa/progress-mahasiswa*') ? 'active' : '' }}">
-            <a href="/dashboard/mahasiswa/progress-mahasiswa" class="menu-link">
-              <div data-i18n="solusi">Progres Mahasiswa</div>
+          <li class="menu-item {{ Request::is('dashboard/progress/materi-1*') ? 'active' : '' }}">
+            <a href="/dashboard/progress/materi-1" class="menu-link">
+              <div data-i18n="materi1">Materi 1</div>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu-sub">
+          <li class="menu-item {{ Request::is('dashboard/progress/materi-2*') ? 'active' : '' }}">
+            <a href="/dashboard/progress/materi-2" class="menu-link">
+              <div data-i18n="materi2">Materi 2</div>
             </a>
           </li>
         </ul>
