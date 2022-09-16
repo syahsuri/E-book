@@ -3,14 +3,14 @@
 @section('content')
 <div class="row">
     <div class="col col-md-6">
-        <a class="btn btn-outline-secondary" href="/dashboard/mahasiswa/list-mahasiswa" />
+        <a class="btn btn-outline-secondary" href="{{ route('list-user.index') }}" />
         <i class="fa-regular fa-chevron-left me-2"></i>
         Kembali
         </a>
 
         <div class="card mt-3">
             <div class="card-body">
-                <form action="">
+                <form action="{{ route('list-user.update', $user->id) }}">
                     <div class="mb-3">
                         <label for="nim" class="form-label">NIM</label>
                         <input type="text" class="form-control" name="nim" id="nim" value="" autofocus required>
@@ -24,10 +24,6 @@
                         <input type="text" class="form-control" name="sekolah" id="sekolah" value="" required>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" value="" required>
-                    </div>
-                    <div class="mb-3">
                         <label for="role" class="form-label">Role</label>
                         <select class="form-select" name="role" id="role">
                             <option value="0">Mahasiswa</option>
@@ -36,7 +32,7 @@
                         </select>
                     </div>
                     <div class="text-end">
-                        <button type="submit" class="btn btn-primary">Tambah Mahasiswa</button>
+                        <button type="submit" class="btn btn-primary">Edit Mahasiswa</button>
                     </div>
                 </form>
             </div>

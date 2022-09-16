@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +25,21 @@ Route::get('/article', function () {
 
 Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
+// Dashboard
+Route::prefix('/dashboard')->group(function () {
+
+    Route::get('/', function () {
+        return view('dashboard.index',[
+            'title' => 'Dashboard'
+        ]);
+    });
+
+    Route::resource('/user/list-user', DashboardUserController::class);
+    Route::post('/user/list-user/reset-password', [DashboardUserController::class, 'resetPasswordAdmin']);
+
+
 });
 
-Route::get('/dashboard/mahasiswa/list-mahasiswa', function () {
-    return view('dashboard.mahasiswa.index');
-});
 
 Route::get('/dashboard/progress/materi-1', function () {
     return view('dashboard.materi1.index');
@@ -38,10 +47,6 @@ Route::get('/dashboard/progress/materi-1', function () {
 
 Route::get('/dashboard/progress/materi-2', function () {
     return view('dashboard.materi2.index');
-});
-
-Route::get('/dashboard/mahasiswa/list-mahasiswa/create', function () {
-    return view('dashboard.mahasiswa.create');
 });
 
 Route::get('/dashboard/mahasiswa/list-mahasiswa/edit', function () {

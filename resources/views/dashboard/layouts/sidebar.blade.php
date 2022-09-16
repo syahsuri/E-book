@@ -16,17 +16,17 @@
       </a>
     </li>
 
-      {{-- Mahasiswa --}}
-      <li class="menu-item {{ Request::is('dashboard/mahasiswa*') ? 'active open' : '' }}">
+      {{-- User --}}
+      <li class="menu-item {{ Request::is('dashboard/user*') ? 'active open' : '' }}">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="fa-duotone fa-user me-3"></i>
-          <div data-i18n="Layouts">Mahasiswa</div>
+          <div data-i18n="Layouts">User</div>
         </a>
 
         <ul class="menu-sub">
-          <li class="menu-item {{ Request::is('dashboard/mahasiswa/list-mahasiswa*') ? 'active' : '' }}">
-            <a href="/dashboard/mahasiswa/list-mahasiswa" class="menu-link">
-              <div data-i18n="solusi">List Mahasiswa</div>
+          <li class="menu-item {{ Request::is('dashboard/user/list-user*') ? 'active' : '' }}">
+            <a href="/dashboard/user/list-user" class="menu-link">
+              <div data-i18n="user">List User</div>
             </a>
           </li>
         </ul>
