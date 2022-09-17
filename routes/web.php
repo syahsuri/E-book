@@ -37,9 +37,7 @@ Route::prefix('/dashboard')->group(function () {
     Route::resource('/user/list-user', DashboardUserController::class);
     Route::post('/user/list-user/reset-password', [DashboardUserController::class, 'resetPasswordAdmin']);
 
-
 });
-
 
 Route::get('/dashboard/progress/materi-1', function () {
     return view('dashboard.materi1.index');
@@ -49,8 +47,8 @@ Route::get('/dashboard/progress/materi-2', function () {
     return view('dashboard.materi2.index');
 });
 
-Route::get('/dashboard/mahasiswa/list-mahasiswa/edit', function () {
-    return view('dashboard.mahasiswa.edit');
+Route::get('/dashboard/user/list-user/edit', function () {
+    return view('dashboard.user.edit');
 });
 
 Route::get('/dashboard/mahasiswa/progress-mahasiswa', function () {
