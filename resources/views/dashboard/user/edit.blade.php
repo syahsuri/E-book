@@ -10,14 +10,14 @@
 
         <div class="card mt-3">
             <div class="card-body">
-                <form action="{{ route('list-user.update', $user->id) }}">
+                <form action="{{ route('list-user.update', $user->id) }}" method="post" enctype="multipart/form-data">
                     @method('put')
                     @csrf
                     <div class="mb-3">
                         <label for="nim" class="form-label">NIM</label>
-                        <input type="text" class="form-control @error('nim') is-invalid @enderror" name="nim" id="nim" value="{{old ('nama',$user->nim)}}" autofocus required>
+                        <input type="text" class="form-control @error('nim') is-invalid @enderror" name="nim" id="nim" value="{{old ('nim',$user->nim)}}" autofocus required>
 
-                        @error('nama')
+                        @error('nim')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -36,8 +36,8 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="sekolah" class="form-label">Asal Sekolah</label>
-                        <input type="text" class="form-control @error('asalkampus') is-invalid @enderror" name="sekolah" id="sekolah" value="{{old ('nama',$user->asalkampus)}}" required>
+                        <label for="asalkampus" class="form-label">Asal Sekolah</label>
+                        <input type="text" class="form-control @error('asalkampus') is-invalid @enderror" name="asalkampus" id="asalkampus" value="{{old ('asalkampus',$user->asalkampus)}}" required>
 
                         @error('asalkampus')
                         <div class="invalid-feedback">

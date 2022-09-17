@@ -76,11 +76,11 @@ class DashboardUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(User $list_user)
     {
         return view('dashboard.user.edit', [
             'title' => 'Edit User',
-            'user' => $user
+            'user' => $list_user
         ]);
     }
 
@@ -91,22 +91,21 @@ class DashboardUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, User $list_user)
     {
         $rules = [
-            'nim' => 'required|max:255',
             'nama' => 'required|max:255',
-            'asalkampus' => 'required|max:13',
+            'asalkampus' => 'required|max:255',
             'role' => 'required'
         ];
 
-        if ($request->username != $user->username) {
-            $rules['username'] = ['required', 'min:6', 'max:16', 'unique:users'];
+        if ($request->nim != $list_user->nim) {
+            $rules['nim'] = ['required', 'min:13', 'max:255', 'unique:users'];
         }
 
         $validatedData = $request->validate($rules);
 
-        User::where('id', $user->id)->update($validatedData);
+        User::where('id', $list_user->id)->update($validatedData);
 
         return redirect('/dashboard/user/list-user')->with('success', 'User berhasil diperbarui!');
     }
