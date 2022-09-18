@@ -153,7 +153,7 @@
                                                 @csrf
                                                 <div class="modal-body">
                                                     <p class="fs-6">Apakah anda yakin akan menghapus user
-                                                        <b>{{ '@' . $user->username }}</b>?
+                                                        <b>{{ '@' . $user->nama }}</b>?
                                                     </p>
                                                 </div>
                                                 <div class="modal-footer">

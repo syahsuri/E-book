@@ -116,9 +116,10 @@ class DashboardUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $list_user)
     {
-        //
+        User::destroy($list_user->id);
+        return redirect('/dashboard/user/list-user')->with('success', "User $list_user->username berhasil dihapus!");
     }
 
     public function resetPasswordAdmin(Request $request)
