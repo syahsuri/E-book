@@ -21,6 +21,14 @@ class ArticleController extends Controller
         ]);
 
     }
+
+    public function quiz()
+    {
+        return view('article.quiz', [
+            'title' => 'Penyajian Data',
+        ]);
+
+    }
     
 
 }

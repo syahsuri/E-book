@@ -22,6 +22,7 @@ use App\Http\Controllers\DashboardUserController;
 Route::controller(ArticleController::class)->group(function () {
     Route::get('/article', 'index1');
     Route::get('/article2', 'index2');
+    Route::get('/quiz', 'quiz');
 });
 
 Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
