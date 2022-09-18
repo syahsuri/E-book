@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardUserController;
@@ -18,9 +19,9 @@ use App\Http\Controllers\DashboardUserController;
 */
 
 
-
-Route::get('/article', function () {
-    return view('article');
+Route::controller(ArticleController::class)->group(function () {
+    Route::get('/article', 'index1');
+    Route::get('/article2', 'index2');
 });
 
 Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
