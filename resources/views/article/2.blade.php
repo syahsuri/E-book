@@ -1,6 +1,35 @@
 @extends("layout_article.main")
 
 @section("container")
+
+<nav>
+    <div class="row border">
+        <div class="col pt-1">
+         <a href="/beranda" class="a fw-bold fs-5"><i class="bi bi-arrow-left"></i> Penyajian Data </a>
+        </div>
+        <div class="col">
+        <button class="btn float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><h4><i class="bi bi-list"></i></h4></button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Modul</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul>
+                <li><a href="/article"> Mengapa data perlu disajikan?</a></li>
+                  <li><a href="/article2"> Menyajikan data variabel kategori</a></li>
+                  <li><a href="/article3"> Diagram batang</a></li>
+                  <li><a href=""> Menyajikan data variabel kategori</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+</nav>
+
+<div class="container pt-3 pb-3">
 <article class="p-5">
     <h1 class="fw-bold">Menyajikan data variabel kategori</h1>
     <h2 class="mt-5">1.1 Penyaluran Zakat.</h2>
@@ -14,31 +43,88 @@
     Tabel 1.1 berikut menampilkan data penyaluran zakat berdasarkan Asnaf pada Tahun 2019.</p>
 
 <table class="table table-dark table-striped mt-5">
-  <thead class=" m-auto">
+  <thead class="text-center">
     <tr>
-      <th scope="col">NO</th>
-      <th scope="col">Asnaf</th>
-      <th scope="col">Penyaluran Per Asnaf</th>
+      <th scope="col" >NO</th>
+      <th scope="col" >Asnaf</th>
+      <th scope="col" >Penyaluran Per Asnaf</th>
+      <th></th>
+    </tr>
+    <tr>
+      <th rowspan="2"></th>
+      <td rowspan="2"></td>
+      <td>Jumlah Dana (Rp)</td>
+      <td>Persentase (%)</td>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="text-center">
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
+      <td>Fakir dan Miskin</td>
+      <td>188.484.194.602</td>
+      <td>69,6</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
+      <td>Amil</td>
+      <td>34.782.883.136</td>
+      <td>12,8</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td >Larry the Bird</td>
-      <td>as</td>
+      <td>Muallaf</td>
+      <td>2.044.314.613</td>
+      <td>0,8</td>
     </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Riqab</td>
+      <td>0</td>
+      <td>0,0</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>Gharimin</td>
+      <td>366.415.513</td>
+      <td>0,1</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Fi Sabilillah</td>
+      <td>44.915.837.079</td>
+      <td>16,6</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>Ibnu Sabil</td>
+      <td>1123.305.822</td>
+      <td>0,0</td>
+    </tr>
+    <tr >
+      <th colspan="2">TOTAL PEMBAYARAN ZAKAT</th>
+      <td>270.716.950.765</td>
+      <td>100,0</td>
+    </tr>
+
   </tbody>
 </table>
-
+<p class="text-center fs-5"><b>Tabel 1.1 </b> Data penyaluran zakat Tahun 2019 berdasarkan Asnaf</p>
+        
+        <div class="peringatan p-4 mt-5" >
+            <h2 class="mt-3">Latihan</h2>
+            <p style="color:red;">1.1 Urutan data dalam tabel. Menurutmu, bagaimana urutan yang sesuai untuk menyusun kategori dalam Tabel 1.1? Berikan alasanmu.
+            Dari Tabel 1.1 terlihat bahwa golongan Riqab mendapatkan penyaluran zakat sebesar 0. Berikan komentarmu!
+            </p>
+        </div>
 </article>
+</div>
+
+<footer>
+    <hr>
+    <ul class=" ul d-flex">
+        <li class="li"><a href="/article" class="a"><i class="bi bi-chevron-left "></i> {{ $articles[1]->nama_article }} </a></li>
+        <li class="li fw-bolder b">{{ $articles[2]->nama_article }} </li>
+        <li class="li"><a href="/article3" class="a">{{ $articles[3]->nama_article }} <i class="bi bi-chevron-right"></i></a>  </li>
+    </ul>
+</footer>
 @endsection

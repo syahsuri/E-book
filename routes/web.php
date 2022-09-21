@@ -22,6 +22,10 @@ use App\Http\Controllers\DashboardUserController;
 Route::controller(ArticleController::class)->group(function () {
     Route::get('/article', 'index1');
     Route::get('/article2', 'index2');
+    Route::get('/article3', 'index3');
+    Route::get('/article4', 'index4');
+    Route::get('/article5', 'index5');
+    Route::get('/article6', 'index6');
     Route::get('/quiz', 'quiz');
 });
 
@@ -49,9 +53,6 @@ Route::get('/dashboard/progress/materi-2', function () {
     return view('dashboard.materi2.index');
 });
 
-Route::get('/dashboard/user/list-user/edit', function () {
-    return view('dashboard.user.edit');
-});
 
 Route::get('/dashboard/mahasiswa/progress-mahasiswa', function () {
     return view('dashboard.progress.index');

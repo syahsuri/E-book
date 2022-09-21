@@ -1,5 +1,4 @@
 @extends("layout.main")
-
 @section("container")
 <section class="beranda">
     <div class="row image d-flex">
