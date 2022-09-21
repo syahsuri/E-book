@@ -28,21 +28,25 @@ class LoginController extends Controller
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended('/beranda');
+            if (Auth::user()->role != 2) {
+                return redirect()->intended('/beranda');
+            } else {
+                return redirect()->intended('/dashboard');
+            }
         }
 
         return back()->with('LoginErorr', 'Login Failed!');
-      
+
     }
 
     public function logout(Request $request)
     {
     Auth::logout();
- 
+
     $request->session()->invalidate();
- 
+
     $request->session()->regenerateToken();
- 
+
     return redirect('/');
     }
 }

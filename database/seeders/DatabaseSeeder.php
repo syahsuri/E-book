@@ -4,7 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Article;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -35,6 +37,34 @@ class DatabaseSeeder extends Seeder
         ]);
         Article::create([
             'nama_article' => 'Diagram garis',
+        ]);
+
+        User::create([
+            'nama' => 'Alvin Syahri',
+            'asalkampus' => 'Politeknik Negeri Lhokseumawe',
+            'password' => Hash::make(123123123),
+            'nim' => '2020573010006',
+            'role' => 2,
+            'materi1' => 0
+
+        ]);
+        User::create([
+            'nama' => 'Syah Syuri Alam',
+            'asalkampus' => 'Politeknik Negeri Lhokseumawe',
+            'password' => Hash::make(123123123),
+            'nim' => '2020573010071',
+            'role' => 1,
+            'materi1' => 0
+
+        ]);
+        User::create([
+            'nama' => 'M Tajul Munandar',
+            'asalkampus' => 'Politeknik Negeri Lhokseumawe',
+            'password' => Hash::make(123123123),
+            'nim' => '2020573010031',
+            'role' => 0,
+            'materi1' => 0
+
         ]);
     }
 }

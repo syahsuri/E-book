@@ -3,7 +3,6 @@
 @section('content')
     <div class="row">
         <div class="col">
-            <h3>Materi 2</h3>
             <div class="card mt-3 mb-3">
                 <div class="card-body">
 
@@ -21,8 +20,8 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>2020573010006</td>
-                                <td>Alvin Syahri</td>
+                                <td>2020573010031</td>
+                                <td>M Tajul Munandar</td>
                                 <td>
                                     <div class="progress">
                                         <div class="progress-bar bg-success" role="progressbar" aria-label="Example with label" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>

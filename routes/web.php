@@ -6,6 +6,8 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardProgressController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,28 +36,13 @@ Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
 // Dashboard
 Route::prefix('/dashboard')->group(function () {
 
-    Route::get('/', function () {
-        return view('dashboard.index',[
-            'title' => 'Dashboard'
-        ]);
-    });
+    Route::get('/', [DashboardController::class, 'index'])->middleware('auth');
 
-    Route::resource('/user/list-user', DashboardUserController::class);
-    Route::post('/user/list-user/reset-password', [DashboardUserController::class, 'resetPasswordAdmin']);
+    Route::resource('/user/list-user', DashboardUserController::class)->middleware('dashboard');;
+    Route::post('/user/list-user/reset-password', [DashboardUserController::class, 'resetPasswordAdmin'])->middleware('dashboard');
 
-});
-
-Route::get('/dashboard/progress/materi-1', function () {
-    return view('dashboard.materi1.index');
-});
-
-Route::get('/dashboard/progress/materi-2', function () {
-    return view('dashboard.materi2.index');
-});
-
-
-Route::get('/dashboard/mahasiswa/progress-mahasiswa', function () {
-    return view('dashboard.progress.index');
+    Route::get('/progress/materi-1', [DashboardProgressController::class, 'materi1'])->middleware('dashboard');
+    Route::get('/progress/materi-2', [DashboardProgressController::class, 'materi2'])->middleware('dashboard');
 });
 
 Route::controller(RegisterController::class)->group(function () {
