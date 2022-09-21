@@ -15,6 +15,11 @@
         <h2 class="mt-4">2.Membandingkan Grafik Persentase.</h2>
         <p>Data persentase volume impor buah-buahan pada Tahun 2020 ditampilkan dalam tiga grafik berikut.
             Grafik yang mana yang menurutmu paling tepat untuk menampilkan data tersebut? Klik salah satu grafik.</p>
+        <div class="row">
+            <div class="col btn" id="benar"><img src="img/quiz/diagrambatang_imp06.png" style=" width: 300px;" alt=""></div>
+            <div class="col btn" id="salah"><img src="img/quiz/diagrampie_impor04.png" style=" width: 300px;" alt=""></div>
+            <div class="col btn" id="salah"><img src="img/quiz/diagramplot_impor03.png" style=" width: 300px;" alt=""></div>
+        </div>
     </section>
 
     <section class="soal mt-3">
@@ -58,25 +63,40 @@
             untuk menampilkan data total volume impor
             buah-buahan menurut negara asal utama pada tahun 2010 sampai dengan Tahun 2020? Klik salah satu grafik berikut.</p>
         <div class="row">
-            <div class="col btn" data-bs-toggle="modal" data-bs-target="#modalsalah"><img src="img/quiz/diagrambatang_tah01.png" style="height: 250px; width: 400px;" alt=""></div>
-            <div class="col btn" data-bs-toggle="modal" data-bs-target="#modalsalah"><img src="img/quiz/diagramgaris_tahun01.png" style="height: 250px; width: 400px;" alt=""></div>
-            <div class="col btn mt-5 d-flex justify-content-center"><img src="img/quiz/diagrampie_tahun01.png" style="height: 250px; width: 400px;" alt=""></div>
+            <div class="col btn " id="salah"><img src="img/quiz/diagrambatang_tah01.png" style=" width: 320px;" alt=""></div>
+            <div class="col btn " id="salah"><img src="img/quiz/diagramgaris_tahun01.png" style=" width: 320px;" alt=""></div>
+            <div class="col btn " id="benar"><img src="img/quiz/diagrampie_tahun01.png" style=" width: 300px;" alt=""></div>
         </div>
     </section>
 
-    <div class="modal" id="modalsalah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body ">
-                    <img class="d-flex justify-content-center" src="img/quiz/krgsesuai2.png" style="height: 150px; width: 300px;" alt="salah">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">OK</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </article>
+
+<script>
+    const buttons = document.querySelectorAll('#salah');
+    for (const button of buttons) {
+        button.addEventListener('click', function() {
+            Swal.fire({
+                title: 'Kurang Sesuai!!! ',
+                text: 'Fluktuasi data Seiring Waktu tidak sesuai dengan Diagram Batang',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            })
+        })
+
+    }
+
+    const buttonb = document.querySelectorAll('#benar');
+    for (const button of buttonb) {
+        button.addEventListener('click', function() {
+            Swal.fire({
+                title: 'Benar',
+                text: '',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            })
+        })
+
+    }
+</script>
 
 @endsection

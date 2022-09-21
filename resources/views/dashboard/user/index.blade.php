@@ -34,7 +34,7 @@
                         style="width:100%">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>No</th>
                                 <th>NIM</th>
                                 <th>Nama</th>
                                 <th>Asal Sekolah</th>

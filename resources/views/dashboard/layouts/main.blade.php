@@ -31,6 +31,10 @@
   <!-- Vendors CSS -->
   <link rel="stylesheet" href="{{ asset('vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
+  <!-- sweetalert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.33/dist/sweetalert2.all.min.js"></script>
+
+
   {{-- Chart JS --}}
   <script src="https://code.highcharts.com/highcharts.js"></script>
 
