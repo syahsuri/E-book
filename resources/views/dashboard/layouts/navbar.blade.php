@@ -1,5 +1,4 @@
-<nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-    id="layout-navbar">
+<nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
     <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
         <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
             <i class="fa-regular fa-bars fa-lg"></i>
@@ -29,14 +28,26 @@
                                     <span class="fw-semibold d-block">{{ auth()->user()->nama }}</span>
                                     <small class="text-muted">
                                         @if (auth()->user()->role == 1)
-                                            Guru
+                                        Guru
                                         @elseif (auth()->user()->role == 2)
-                                            Operator
+                                        Operator
                                         @endif
                                     </small>
                                 </div>
                             </div>
                         </a>
+                    </li>
+                    <li>
+                        <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                        <form action="/beranda" method="get">
+                            @csrf
+                            <button type="submit" class="dropdown-item">
+                                <i class="fa-light fa-house me-2"></i>
+                                Beranda
+                            </button>
+                        </form>
                     </li>
                     <li>
                         <div class="dropdown-divider"></div>

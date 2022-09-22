@@ -11,7 +11,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill"></i> Profile</a></li>
                         @if (auth()->user()->role != 0)
-                            <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-house-door"></i> Dashboard</a>
+                            <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-clipboard-data"></i> Dashboard</a>
                             </li>
                         @endif
                         <li>
