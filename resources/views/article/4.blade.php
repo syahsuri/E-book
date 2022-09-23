@@ -25,16 +25,16 @@
             </div>
         </div>
     </div>
-    
+
 </nav>
 
 <div class="container pt-3 pb-3">
     <article class="p-5">
         <h1 class="fw-bold">Diagram Batang Majemuk</h1>
         <h2 class="mt-5">1.3 Tingkat buta huruf.</h2>
-        <p>Menuntut ilmu merupakan kewajiban bagi setiap muslim lelaki dan perempuan. 
-            Ilmu pengetahuan yang paling mendasar adalah kemampuan membaca atau melek huruf. 
-            Pemberantasan buta huruf telah diprogramkan pemerintah Indonesia sejak lama dan telah membuahkan hasil yang signifikan yang terlihat dari penurunan persentase penduduk buta huruf saat ini dibandingkan dengan periode awal kemerdekaan. 
+        <p>Menuntut ilmu merupakan kewajiban bagi setiap muslim lelaki dan perempuan.
+            Ilmu pengetahuan yang paling mendasar adalah kemampuan membaca atau melek huruf.
+            Pemberantasan buta huruf telah diprogramkan pemerintah Indonesia sejak lama dan telah membuahkan hasil yang signifikan yang terlihat dari penurunan persentase penduduk buta huruf saat ini dibandingkan dengan periode awal kemerdekaan.
             Berikut merupakan data persentase penduduk berusia 10 tahun ke atas yang buta huruf di Indonesia pada Tahun 2020.</p>
         <table class="table table-dark table-striped mt-5">
         <thead class="text-center">
@@ -72,21 +72,21 @@
         </tbody>
         </table>
         <p class="text-center fs-5"><b>Tabel 1.3</b>  Persentase penduduk buta huruf usia >10 tahun pada Tahun 2020</p>
-        <p>Jika ingin menampilkan total persentase penduduk buta huruf tanpa perincian kenis kelamin, 
+        <p>Jika ingin menampilkan total persentase penduduk buta huruf tanpa perincian kenis kelamin,
             dapat digunakan diagram batang tunggal seperti pada Gambar 2.1. Namun, jika ingin menampilkan data berdasarkan jenis kelamin,
              maka dapat digunakan diagram batang majemuk yang menampilkan dua komponen seperti pada Gambar 1.2.</p>
         <img src="img/t1.jpg" alt="" class="d-block m-auto mt-5">
         <p class="text-center fs-5"><b>Gambar 1.2</b>  Diagram batang untuk data persentase penduduk buta huruf pada Tabel 1.3</p>
-        
+
         <div class="peringatan p-4 mt-5" >
             <h2 class="mt-3">Latihan</h2>
-            <p style="color:red;">1.2 Interpretasi Data. Perhatikan diagram batang pada Gambar 1.3. Informasi apa yang dapat kamu ceritakan dari data tersebut? Berdasarkan data tersebut, menurutmu bagaimana bentuk kebijakan 
+            <p style="color:red;">1.2 Interpretasi Data. Perhatikan diagram batang pada Gambar 1.3. Informasi apa yang dapat kamu ceritakan dari data tersebut? Berdasarkan data tersebut, menurutmu bagaimana bentuk kebijakan
             yang perlu dijalankan oleh pemerintah Indonesia sebagai upaya untuk menuntaskan permasalahan buta huruf?
             </p>
         </div>
 
-        
-        
+
+
 
     </article>
 </div>
@@ -95,9 +95,28 @@
 <footer>
     <hr>
     <ul class=" ul d-flex">
-        <li class="li"><a href="/article3" class="a"><i class="bi bi-chevron-left "></i> {{ $articles[3]->nama_article }}  </a></li>
+        <li class="li">
+            <form action="{{ route('call3') }}" method="post">
+                @csrf
+                <button type="submit" class="dropdown-item">
+                    {{ $articles[3]->nama_article }}
+                    class="bi bi-chevron-left">
+                </button>
+            </form>
+        </li>
         <li class="li fw-bolder b">{{ $articles[4]->nama_article }} </li>
-        <li class="li"><a href="/article5" class="a">{{ $articles[5]->nama_article }}  <i class="bi bi-chevron-right"></i></a>  </li>
+        <li class="li">
+            <form action="{{ route('call5') }}" method="post">
+                @csrf
+                <input type="hidden" name="id" value="{{ auth()->user()->id }}">
+                <input type="hidden" name="materi" value="{{ auth()->user()->materi1 }}">
+                <input type="hidden" name="materi1" value="{{ $articles[4]->id }}">
+                <button type="submit" class="dropdown-item">
+                    {{ $articles[5]->nama_article }}
+                    class="bi bi-chevron-right">
+                </button>
+            </form>
+        </li>
     </ul>
 </footer>
 @endsection

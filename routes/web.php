@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\CallArticleController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\DashboardController;
@@ -30,6 +31,16 @@ Route::controller(ArticleController::class)->group(function () {
     Route::get('/article6', 'index6');
     Route::get('/quiz', 'quiz');
 });
+
+// call materi 1
+Route::post('/call1', [CallArticleController::class, 'call1'])->name('call1');
+Route::post('/call2', [CallArticleController::class, 'call2'])->name('call2');
+Route::post('/call3', [CallArticleController::class, 'call3'])->name('call3');
+Route::post('/call4', [CallArticleController::class, 'call4'])->name('call4');
+Route::post('/call5', [CallArticleController::class, 'call5'])->name('call5');
+Route::post('/call6', [CallArticleController::class, 'call6'])->name('call6');
+Route::post('/call7', [CallArticleController::class, 'call7'])->name('call7');
+
 
 Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
 

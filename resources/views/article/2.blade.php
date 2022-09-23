@@ -26,20 +26,20 @@
             </div>
         </div>
     </div>
-    
+
 </nav>
 
 <div class="container pt-3 pb-3">
 <article class="p-5">
     <h1 class="fw-bold">Menyajikan data variabel kategori</h1>
     <h2 class="mt-5">1.1 Penyaluran Zakat.</h2>
-    <p>Dalam QS. At-Taubah ayat 80 disebutkan bahwa terdapat 8 (delapan) golongan orang yang berhak menerima zakat, yaitu orang fakir, miskin, amil, muallaf, hamba sahaya (riqab), 
+    <p>Dalam QS. At-Taubah ayat 80 disebutkan bahwa terdapat 8 (delapan) golongan orang yang berhak menerima zakat, yaitu orang fakir, miskin, amil, muallaf, hamba sahaya (riqab),
         gharimin, fisabilillah, dan ibnu sabil. 8 golongan ini disebut dengan Asnaf</p>
 
-    <p>Asnaf merupakan variabel kategori, yang nilai-nilainya (atau kategorinya) adalah: fakir, miskin, amil, muallaf, riqab, gharimin, fisabilillah, dan ibnu sabil. 
+    <p>Asnaf merupakan variabel kategori, yang nilai-nilainya (atau kategorinya) adalah: fakir, miskin, amil, muallaf, riqab, gharimin, fisabilillah, dan ibnu sabil.
         Kategori ini berbeda dalam jenisnya, bukan dalam kuantitasnya.</p>
 
-    <p>Di Indonesia, penyaluran zakat ditangani oleh Badan Amil Zakat Nasional (BAZNAS) dan data penyaluran zakat tersebut dilaporkan setiap tahun dalam bentuk buku laporan statistik zakat nasional. Data penyaluran zakat berdasarkan Asnaf dapat disajikan dengan menampilkan jumlah dana dan persentase yang disalurkan untuk setiap golongan. 
+    <p>Di Indonesia, penyaluran zakat ditangani oleh Badan Amil Zakat Nasional (BAZNAS) dan data penyaluran zakat tersebut dilaporkan setiap tahun dalam bentuk buku laporan statistik zakat nasional. Data penyaluran zakat berdasarkan Asnaf dapat disajikan dengan menampilkan jumlah dana dan persentase yang disalurkan untuk setiap golongan.
     Tabel 1.1 berikut menampilkan data penyaluran zakat berdasarkan Asnaf pada Tahun 2019.</p>
 
 <table class="table table-dark table-striped mt-5">
@@ -109,7 +109,7 @@
   </tbody>
 </table>
 <p class="text-center fs-5"><b>Tabel 1.1 </b> Data penyaluran zakat Tahun 2019 berdasarkan Asnaf</p>
-        
+
         <div class="peringatan p-4 mt-5" >
             <h2 class="mt-3">Latihan</h2>
             <p style="color:red;">1.1 Urutan data dalam tabel. Menurutmu, bagaimana urutan yang sesuai untuk menyusun kategori dalam Tabel 1.1? Berikan alasanmu.
@@ -122,9 +122,28 @@
 <footer>
     <hr>
     <ul class=" ul d-flex">
-        <li class="li"><a href="/article" class="a"><i class="bi bi-chevron-left "></i> {{ $articles[1]->nama_article }} </a></li>
+        <li class="li">
+            <form action="{{ route('call1') }}" method="post">
+                @csrf
+                <button type="submit" class="dropdown-item">
+                    {{ $articles[1]->nama_article }}
+                    class="bi bi-chevron-left">
+                </button>
+            </form>
+        </li>
         <li class="li fw-bolder b">{{ $articles[2]->nama_article }} </li>
-        <li class="li"><a href="/article3" class="a">{{ $articles[3]->nama_article }} <i class="bi bi-chevron-right"></i></a>  </li>
+        <li class="li">
+            <form action="{{ route('call3') }}" method="post">
+                @csrf
+                <input type="hidden" name="id" value="{{ auth()->user()->id }}">
+                <input type="hidden" name="materi" value="{{ auth()->user()->materi1 }}">
+                <input type="hidden" name="materi1" value="{{ $articles[2]->id }}">
+                <button type="submit" class="dropdown-item">
+                    {{ $articles[3]->nama_article }}
+                    class="bi bi-chevron-right">
+                </button>
+            </form>
+        </li>
     </ul>
 </footer>
 @endsection

@@ -18,15 +18,23 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>2020573010031</td>
-                                <td>M Tajul Munandar</td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-info" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                                      </div>
-                                </td>
+                            @foreach ($users as $user)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $user->nim }}</td>
+                                    <td>{{ $user->nama }}</td>
+                                    <td>
+                                        @php
+                                            $value = intval((100/7)*($user->materi1));
+                                        @endphp
+                                        <div class="progress">
+                                            <div class="progress-bar bg-info" role="progressbar"
+                                                aria-label="Example with label" style="width: {{ $value }}%;" aria-valuenow="{{ $value }}"
+                                                aria-valuemin="0" aria-valuemax="100">{{ $value }}%</div>
+                                        </div>
+                                    </td>
+                                <tr>
+                            @endforeach
                         </tbody>
                     </table>
                     {{--  end tables  --}}
@@ -36,4 +44,3 @@
         </div>
     </div>
 @endsection
-

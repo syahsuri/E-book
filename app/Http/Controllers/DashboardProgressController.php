@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardProgressController extends Controller
@@ -10,6 +11,7 @@ class DashboardProgressController extends Controller
     {
         return view('dashboard.materi1.index', [
             'title' => 'Materi 1',
+            'users' => User::all()
         ]);
     }
 

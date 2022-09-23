@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-    
+
 </nav>
 
 <div class="container pt-3 pb-3">
@@ -67,12 +67,12 @@
     <label for="riqab">Riqab</label>
     <input type="number" class="form-control" id="riqab" value="8"onchange="updateChart()">
     </div>
-  </div> 
+  </div>
   <hr>
 </div>
 <div class="peringatan p-4" >
-    <p style="color:red;">Pertimbangkan dengan seksama cara terbaik dalam mengurutkan nilai variabel kategori ketika membuat 
-        diagram batang. Pilihlah cara pengurutan yang paling sesuai menurutmu. Jika kamu ragu, 
+    <p style="color:red;">Pertimbangkan dengan seksama cara terbaik dalam mengurutkan nilai variabel kategori ketika membuat
+        diagram batang. Pilihlah cara pengurutan yang paling sesuai menurutmu. Jika kamu ragu,
         tanyakan pendapat temanmu apakah informasi penting yang ingin kamu tampilkan dapat terbaca dari pengurutan
         yang kamu lakukan!
     </p>
@@ -119,9 +119,28 @@
 <footer>
     <hr>
     <ul class=" ul d-flex">
-        <li class="li"><a href="/article2" class="a"><i class="bi bi-chevron-left "></i> {{ $articles[2]->nama_article }} </a></li>
+        <li class="li">
+            <form action="{{ route('call2') }}" method="post">
+                @csrf
+                <button type="submit" class="dropdown-item">
+                    {{ $articles[2]->nama_article }}
+                    class="bi bi-chevron-left">
+                </button>
+            </form>
+        </li>
         <li class="li fw-bolder b">{{ $articles[3]->nama_article }} </li>
-        <li class="li"><a href="/article4" class="a">{{ $articles[4]->nama_article }}  <i class="bi bi-chevron-right"></i></a>  </li>
+        <li class="li">
+            <form action="{{ route('call4') }}" method="post">
+                @csrf
+                <input type="hidden" name="id" value="{{ auth()->user()->id }}">
+                <input type="hidden" name="materi" value="{{ auth()->user()->materi1 }}">
+                <input type="hidden" name="materi1" value="{{ $articles[3]->id }}">
+                <button type="submit" class="dropdown-item">
+                    {{ $articles[4]->nama_article }}
+                    class="bi bi-chevron-right">
+                </button>
+            </form>
+        </li>
     </ul>
 </footer>
 @endsection

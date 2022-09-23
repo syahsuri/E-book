@@ -20,7 +20,10 @@
                     <p>Penyajian Data</p>
                     </div>
                     <div class="col p-4 ">
-                    <button class ="btn btn-pelajari float-end" onclick="location.href='/article'">Pelajari</button>
+                        <form action="{{ route('call1') }}" method="post">
+                            @csrf
+                            <button type="submit" class ="btn btn-pelajari float-end">Pelajari</button>
+                        </form>
                     </div>
                 </div>
             </div>
