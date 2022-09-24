@@ -27,6 +27,7 @@
                                         <div class="progress-bar bg-success" role="progressbar" aria-label="Example with label" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>
                                       </div>
                                 </td>
+                            </tr>
                         </tbody>
                     </table>
                     {{--  end tables  --}}

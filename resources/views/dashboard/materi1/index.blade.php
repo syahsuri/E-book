@@ -25,15 +25,16 @@
                                     <td>{{ $user->nama }}</td>
                                     <td>
                                         @php
-                                            $value = intval((100/7)*($user->materi1));
+                                            $value = intval((100 / 7) * $user->materi1);
                                         @endphp
                                         <div class="progress">
                                             <div class="progress-bar bg-info" role="progressbar"
-                                                aria-label="Example with label" style="width: {{ $value }}%;" aria-valuenow="{{ $value }}"
-                                                aria-valuemin="0" aria-valuemax="100">{{ $value }}%</div>
+                                                aria-label="Example with label" style="width: {{ $value }}%;"
+                                                aria-valuenow="{{ $value }}" aria-valuemin="0" aria-valuemax="100">
+                                                {{ $value }}%</div>
                                         </div>
                                     </td>
-                                <tr>
+                                </tr>
                             @endforeach
                         </tbody>
                     </table>
