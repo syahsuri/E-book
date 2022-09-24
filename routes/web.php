@@ -9,6 +9,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardProgressController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +67,12 @@ Route::controller(LoginController::class)->group(function () {
     Route::post('/login', 'authenticate');
     Route::post('/logout', 'logout');
 });
+
+Route::get('/profile', function(){
+    return view('profile.profile', [
+        'title' => 'profile'
+    ]);
+});
+
+Route::post('/profile', [ProfileController::class, 'update'])->name('profile');
+

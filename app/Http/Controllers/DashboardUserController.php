@@ -77,7 +77,7 @@ class DashboardUserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(User $list_user)
-    {
+    {   
         return view('dashboard.user.edit', [
             'title' => 'Edit User',
             'user' => $list_user

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">TANYO <span>MURUNO</span></a>
+        <a class="navbar-brand fw-bold" href="  /beranda">TANYO <span>MURUNO</span></a>
         <ul class="nav justify-content-end">
 
             @auth
@@ -9,7 +9,7 @@
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">{{ auth()->user()->nama }}</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill"></i> Profile</a></li>
+                        <li><a class="dropdown-item" href="/profile"><i class="bi bi-person-fill"></i> Profile</a></li>
                         @if (auth()->user()->role != 0)
                             <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-clipboard-data"></i> Dashboard</a>
                             </li>
