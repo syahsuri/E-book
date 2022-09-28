@@ -17,7 +17,15 @@
     @csrf
     <img class="mb-4 login-logo" src="img/login.png" alt="" >
     <h1 class="h3 mb-3 fw-normal">Daftar Akunmu!</h1>
-    
+    <div class="form-floating">
+      <input type="text" class="form-control @error('nim') is-invalid @enderror" id="nim" placeholder="2020573010031" name="nim" required value="{{ old ('nim') }}">
+      <label for="nim">Nomor Induk Mahasiswa </label>
+      @error('nim')
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+      @enderror
+    </div>
     <div class="form-floating">
       <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" name="nama" required value="{{ old ('nama') }}">
       <label for="nama">Nama</label>
@@ -31,15 +39,6 @@
       <input type="text" class="form-control @error('asalkampus') is-invalid @enderror" id="asalkampus" placeholder="asalkampus" name="asalkampus" required value="{{ old ('asalkampus') }}">
       <label for="asalkampus">Asal Kampus</label>
       @error('asalkampus')
-        <div class="invalid-feedback">
-            {{ $message }}
-        </div>
-      @enderror
-    </div>
-    <div class="form-floating">
-      <input type="text" class="form-control @error('nim') is-invalid @enderror" id="nim" placeholder="2020573010031" name="nim" required value="{{ old ('nim') }}">
-      <label for="nim">Nomor Induk Mahasiswa </label>
-      @error('nim')
         <div class="invalid-feedback">
             {{ $message }}
         </div>

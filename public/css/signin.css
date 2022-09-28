@@ -22,12 +22,11 @@ body {
   z-index: 2;
 }
 
-.form-signin input[type="email"] {
+.form-signin input[name="nim"] {
+ 
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .form-signin input[type="password"] {
@@ -36,7 +35,7 @@ body {
   border-top-right-radius: 0;
 }
 
-.form-signin input[type="asal-kampus"] {
+.form-signin input[name="asalkampus"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -44,10 +43,12 @@ body {
   border-top-right-radius: 0;
 }
 
-.form-signin input[type="nama"] {
+.form-signin input[name="nama"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .login-logo{

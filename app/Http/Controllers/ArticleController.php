@@ -10,7 +10,7 @@ class ArticleController extends Controller
     public function index1()
     {
         return view('article.1', [
-            'title' => 'Penyajian Data',
+            'title' => ' Mengapa data perlu disajikan?',
             'articles' => Article::all()
         ]);
     }
@@ -18,7 +18,7 @@ class ArticleController extends Controller
     public function index2()
     {
         return view('article.2', [
-            'title' => 'Penyajian Data',
+            'title' => 'Menyajikan data variable kategori',
             'articles' => Article::all(),
         ]);
     }
@@ -26,7 +26,7 @@ class ArticleController extends Controller
     public function index3()
     {
         return view('article.3', [
-            'title' => 'Penyajian Data',
+            'title' => 'Diagram batang',
             'articles' => Article::all(),
         ]);
     }
@@ -34,7 +34,7 @@ class ArticleController extends Controller
     public function index4()
     {
         return view('article.4', [
-            'title' => 'Penyajian Data',
+            'title' => 'Diagram batang majemuk',
             'articles' => Article::all(),
         ]);
     }
@@ -42,7 +42,7 @@ class ArticleController extends Controller
     public function index5()
     {
         return view('article.5', [
-            'title' => 'Penyajian Data',
+            'title' => 'Diagram lingkar',
             'articles' => Article::all(),
         ]);
     }
@@ -50,15 +50,32 @@ class ArticleController extends Controller
     public function index6()
     {
         return view('article.6', [
-            'title' => 'Penyajian Data',
+            'title' => 'Diagram garis',
             'articles' => Article::all(),
+        ]);
+    }
+
+    public function index7()
+    {
+        return view('article.0', [
+            'title' => 'Penyajian Data',
+            'articles' => Article::all()
         ]);
     }
 
     public function quiz()
     {
         return view('article.quiz', [
-            'title' => 'Penyajian Data',
+            'title' => 'Quiz',
+            'articles' => Article::all(),
+        ]);
+    }
+
+    public function selesai()
+    {
+        return view('article.7', [
+            'title' => 'Congratulation',
+            'articles' => Article::all(),
         ]);
     }
 }

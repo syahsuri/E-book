@@ -38,6 +38,12 @@ class DatabaseSeeder extends Seeder
         Article::create([
             'nama_article' => 'Diagram garis',
         ]);
+        Article::create([
+            'nama_article' => 'Quiz',
+        ]);
+        Article::create([
+            'nama_article' => 'Congratulation',
+        ]);
 
         User::create([
             'nama' => 'Alvin Syahri',

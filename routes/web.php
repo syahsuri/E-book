@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BerandaController;
-use App\Http\Controllers\CallArticleController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DashboardUserController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DashboardProgressController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CallArticleController;
+use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\DashboardProgressController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +30,8 @@ Route::controller(ArticleController::class)->group(function () {
     Route::get('/article4', 'index4');
     Route::get('/article5', 'index5');
     Route::get('/article6', 'index6');
+    Route::get('/article1', 'index7');
+    Route::get('/selesai', 'selesai');
     Route::get('/quiz', 'quiz');
 });
 
@@ -41,6 +43,9 @@ Route::post('/call4', [CallArticleController::class, 'call4'])->name('call4');
 Route::post('/call5', [CallArticleController::class, 'call5'])->name('call5');
 Route::post('/call6', [CallArticleController::class, 'call6'])->name('call6');
 Route::post('/call7', [CallArticleController::class, 'call7'])->name('call7');
+Route::post('/call8', [CallArticleController::class, 'call8'])->name('call8');
+Route::post('/call9', [CallArticleController::class, 'call9'])->name('call9');
+Route::post('/call0', [CallArticleController::class, 'call0'])->name('call0');
 
 
 Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
@@ -68,11 +73,6 @@ Route::controller(LoginController::class)->group(function () {
     Route::post('/logout', 'logout');
 });
 
-Route::get('/profile', function(){
-    return view('profile.profile', [
-        'title' => 'profile'
-    ]);
-});
+Route::get('/profile', [ProfileController::class, 'index']);
 
 Route::post('/profile', [ProfileController::class, 'update'])->name('profile');
-

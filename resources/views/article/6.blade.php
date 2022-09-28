@@ -6,23 +6,7 @@
         <div class="col pt-1">
          <a href="/beranda" class="a fw-bold fs-5"><i class="bi bi-arrow-left"></i> Penyajian Data </a>
         </div>
-        <div class="col">
-        <button class="btn float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><h4><i class="bi bi-list"></i></h4></button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">Modul</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul>
-                  <li><a href="/article"> Mengapa data perlu disajikan?</a></li>
-                  <li><a href="/article2"> Menyajikan data variabel kategori</a></li>
-                  <li><a href="/article3"> Diagram batang</a></li>
-                  <li><a href=""> Menyajikan data variabel kategori</a></li>
-                </ul>
-            </div>
-            </div>
-        </div>
+        @include('layout_article.offcanvas')
     </div>
 </nav>
 
@@ -77,7 +61,7 @@
         <img src="img/6.png" alt="" class="mt-4 d-block m-auto">
         <p class="text-center fs-5"><b>Gambar 1.4</b> Diagram garis pertumbuhan penduduk </p>
         <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/watch?v=qnGXExRZdKY" title="YouTube video" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/I-ceruBVbMI?rel=0" title="YouTube video" allowfullscreen></iframe>
         </div>
         <div class="peringatan p-4 mt-5" >
             <h2 class="mt-3">Latihan</h2>
@@ -97,22 +81,21 @@
         <li class="li">
             <form action="{{ route('call5') }}" method="post">
                 @csrf
-                <button type="submit" class="dropdown-item">
-                    {{ $articles[5]->nama_article }}
-                    class="bi bi-chevron-left">
+                <button type="submit" class="dropdown-item b">
+                <i class="bi bi-chevron-left"></i> {{ $articles[5]->nama_article }}
+                    
                 </button>
             </form>
         </li>
-        <li class="li fw-bolder b">{{ $articles[6]->nama_article }} </li>
+        <li class="li fw-bolder b"> {{ $articles[6]->nama_article }} </li>
         <li class="li">
             <form action="{{ route('call7') }}" method="post">
                 @csrf
                 <input type="hidden" name="id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="materi" value="{{ auth()->user()->materi1 }}">
                 <input type="hidden" name="materi1" value="{{ $articles[6]->id }}">
-                <button type="submit" class="dropdown-item">
-                    Quiz
-                    class="bi bi-chevron-right">
+                <button type="submit" class="dropdown-item b">
+                {{ $articles[7]->nama_article }} <i class="bi bi-chevron-right"></i>
                 </button>
             </form>
         </li>

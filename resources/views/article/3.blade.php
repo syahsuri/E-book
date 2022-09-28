@@ -6,24 +6,7 @@
         <div class="col pt-1">
          <a href="/beranda" class="a fw-bold fs-5"><i class="bi bi-arrow-left"></i> Penyajian Data </a>
         </div>
-        <div class="col">
-        <button class="btn float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><h4><i class="bi bi-list"></i></h4></button>
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">Modul</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul>
-                  <li><a href="/article"> Mengapa data perlu disajikan?</a></li>
-                  <li><a href="/article2"> Menyajikan data variabel kategori</a></li>
-                  <li><a href="/article3"> Diagram batang</a></li>
-                  <li><a href=""> Menyajikan data variabel kategori</a></li>
-                </ul>
-            </div>
-            </div>
-        </div>
+        @include('layout_article.offcanvas')
     </div>
 
 </nav>
@@ -65,7 +48,7 @@
     </div>
     <div class="col">
     <label for="riqab">Riqab</label>
-    <input type="number" class="form-control" id="riqab" value="8"onchange="updateChart()">
+    <input type="number" class="form-control" id="riqab" value="8" onchange="updateChart()">
     </div>
   </div>
   <hr>
@@ -122,9 +105,9 @@
         <li class="li">
             <form action="{{ route('call2') }}" method="post">
                 @csrf
-                <button type="submit" class="dropdown-item">
-                    {{ $articles[2]->nama_article }}
-                    class="bi bi-chevron-left">
+                <button type="submit" class="dropdown-item b">
+                <i class="bi bi-chevron-left"></i> {{ $articles[2]->nama_article }}
+                    
                 </button>
             </form>
         </li>
@@ -135,9 +118,9 @@
                 <input type="hidden" name="id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="materi" value="{{ auth()->user()->materi1 }}">
                 <input type="hidden" name="materi1" value="{{ $articles[3]->id }}">
-                <button type="submit" class="dropdown-item">
-                    {{ $articles[4]->nama_article }}
-                    class="bi bi-chevron-right">
+                <button type="submit" class="dropdown-item b">
+                    {{ $articles[4]->nama_article }} <i class="bi bi-chevron-right"></i>
+                    
                 </button>
             </form>
         </li>

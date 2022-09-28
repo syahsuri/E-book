@@ -20,7 +20,7 @@
                     <p>Penyajian Data</p>
                     </div>
                     <div class="col p-4 ">
-                        <form action="{{ route('call1') }}" method="post">
+                        <form action="{{ route('call0') }}" method="post">
                             @csrf
                             <button type="submit" class ="btn btn-pelajari float-end">Pelajari</button>
                         </form>
@@ -29,19 +29,7 @@
             </div>
         </div>
 
-        <div class="card mt-5 mb-5">
-            <div class="card-body">
-                <div class="row d-flex">
-                    <div class="col">
-                    <p class="fw-bolder">MATA PELAJARAN</p>
-                    <p>Pelajaran</p>
-                    </div>
-                    <div class="col p-4 ">
-                    <button class ="btn btn-pelajari float-end">Pelajari</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </section>
 @endsection

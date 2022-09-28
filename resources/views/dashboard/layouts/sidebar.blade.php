@@ -46,13 +46,13 @@
             </a>
           </li>
         </ul>
-        <ul class="menu-sub">
+        <!-- <ul class="menu-sub">
           <li class="menu-item {{ Request::is('dashboard/progress/materi-2*') ? 'active' : '' }}">
             <a href="/dashboard/progress/materi-2" class="menu-link">
               <div data-i18n="materi2">Materi 2</div>
             </a>
           </li>
-        </ul>
+        </ul> -->
       </li>
   </ul>
 </aside>

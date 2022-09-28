@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="  /beranda">TANYO <span>MURUNO</span></a>
+        <a class="navbar-brand fw-bold" href="/beranda">TANYO <span>MURUNO</span></a>
         <ul class="nav justify-content-end">
 
             @auth

@@ -7,6 +7,30 @@ use Illuminate\Http\Request;
 
 class CallArticleController extends Controller
 {
+    public function call0(Request $request)
+    {
+        $materi1 = intval($request->materi1);
+        $materi = intval($request->materi);
+        $id = intval($request->id);
+
+        if($request->materi != null && $request->materi1 != null && $request->id != null ){
+
+            if($materi<$materi1){
+                $rules = [
+                    'materi1' => 'required|min:1'
+                ];
+
+                $rules['materi1'] = $materi1;
+
+                User::where('id', $id)->update($rules);
+
+                return redirect('/article1');
+            }
+
+        }
+        return redirect('/article1');
+    }
+
     public function call1(Request $request)
     {
         $materi1 = intval($request->materi1);
@@ -173,5 +197,53 @@ class CallArticleController extends Controller
             return redirect('/quiz');
         }
         return redirect('/quiz');
+    }
+
+    public function call8(Request $request)
+    {
+        $materi1 = intval($request->materi1);
+        $materi = intval($request->materi);
+        $id = intval($request->id);
+
+        if($request->materi != null && $request->materi1 != null && $request->id != null){
+
+            if($materi<$materi1){
+                $rules = [
+                    'materi1' => 'required|min:1'
+                ];
+
+                $rules['materi1'] = $materi1;
+
+                User::where('id', $id)->update($rules);
+
+                return redirect('/selesai');
+            }
+            return redirect('/selesai');
+        }
+        return redirect('/selesai');
+    }
+
+    public function call9(Request $request)
+    {
+        $materi1 = intval($request->materi1);
+        $materi = intval($request->materi);
+        $id = intval($request->id);
+
+        if($request->materi != null && $request->materi1 != null && $request->id != null){
+
+            if($materi<$materi1){
+                $rules = [
+                    'materi1' => 'required|min:1'
+                ];
+
+                $rules['materi1'] = $materi1;
+
+                User::where('id', $id)->update($rules);
+
+                return redirect('/beranda');
+            }
+            return redirect('/beranda');
+        }
+        return redirect('/beranda');
     }
 }
