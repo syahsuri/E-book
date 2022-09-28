@@ -34,7 +34,7 @@
                 @csrf
                 <button type="submit" class="dropdown-item b">
                 <i class="bi bi-chevron-left"></i> {{ $articles[0]->nama_article }}
-                    
+
                 </button>
             </form>
         </li>

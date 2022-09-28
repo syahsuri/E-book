@@ -29,7 +29,7 @@
                 <li>Memahami jenis penyajian data yang sesuai untuk data dari berbagai konteks</li>
             </ol>
         </p>
-        
+
     </article>
 </div>
 
@@ -43,7 +43,7 @@
                 @csrf
                 <input type="hidden" name="id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="materi" value="{{ auth()->user()->materi1 }}">
-                <input type="hidden" name="materi1" value="{{ $articles[1]->id }}">
+                <input type="hidden" name="materi1" value="{{ $articles[0]->id }}">
                 <button type="submit" class="dropdown-item b">
                     {{ $articles[1]->nama_article }} <i class="bi bi-chevron-right"></i>
                 </button>

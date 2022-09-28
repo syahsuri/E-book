@@ -10,38 +10,33 @@
         </div>
         <div class="offcanvas-body">
             <ul class="menu-item">
-            <a href="/article1" class="menu-link ">
-                <i class="fa-duotone fa-grid-2 me-3"></i>
-                <div data-i18n="Analytics">Penyajian data</div>
-            </a>
-            <a href="/article" class="menu-link mt-2">
-                <i class="fa-duotone fa-grid-2 me-3"></i>
-                <div data-i18n="Analytics">Mengapa data perlu disajikan?</div>
-            </a>
-            <a href="/article2" class="menu-link mt-2 ">
-                <i class="fa-duotone fa-grid-2 me-3"></i>
-                <div data-i18n="Analytics">Menyajikan data variable kategori</div>
-            </a>
-            <a href="/article3" class="menu-link mt-2">
-                <i class="fa-duotone fa-grid-2 me-3"></i>
-                <div data-i18n="Analytics">Diagram batang</div>
-            </a>
-            <a href="/article4" class="menu-link mt-2">
-                <i class="fa-duotone fa-grid-2 me-3"></i>
-                <div data-i18n="Analytics">Diagram batang majemuk</div>
-            </a>
-            <a href="/article5" class="menu-link mt-2">
-                <i class="fa-duotone fa-grid-2 me-3"></i>
-                <div data-i18n="Analytics">Diagram lingkar</div>
-            </a>
-            <a href="/article6" class="menu-link mt-2">
-                <i class="fa-duotone fa-grid-2 me-3"></i>
-                <div data-i18n="Analytics">Diagram garis</div>
-            </a>
-            <a href="/quiz" class="menu-link mt-2">
-                <i class="fa-duotone fa-grid-2 me-3"></i>
-                <div data-i18n="Analytics">Quiz</div>
-            </a>
+                @php
+                    $i = 0;
+                @endphp
+                @foreach ($articles as $article)
+                    @if ($article->id === 9)
+                    @else
+                        @if (auth()->user()->materi1 + 1 >= $article->id)
+                            <form action="{{ route('call' . $i) }}" method="post">
+                                @csrf
+                                <button type="submit" class="dropdown-item b">
+                                    <div data-i18n="Analytics"><i
+                                            class="fa-duotone fa-grid-2 me-2"></i>{{ $article->nama_article }}</div>
+                                </button>
+                            </form>
+                            @php
+                                $i = $i + 1;
+                            @endphp
+                        @else
+                            <form>
+                                <button disabled="disabled" class="dropdown-item b">
+                                    <div data-i18n="Analytics"><i
+                                            class="fa-duotone fa-grid-2 me-2"></i>{{ $article->nama_article }}</div>
+                                </button>
+                            </form>
+                        @endif
+                    @endif
+                @endforeach
             </ul>
         </div>
     </div>
