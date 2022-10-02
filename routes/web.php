@@ -5,9 +5,11 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Article2Controller;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CallArticleController;
+use App\Http\Controllers\CallArticle2Controller;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\DashboardProgressController;
 
@@ -22,7 +24,7 @@ use App\Http\Controllers\DashboardProgressController;
 |
 */
 
-
+//article1
 Route::controller(ArticleController::class)->group(function () {
     Route::get('/article', 'index1');
     Route::get('/article2', 'index2');
@@ -47,6 +49,29 @@ Route::post('/call8', [CallArticleController::class, 'call8'])->name('call8');
 Route::post('/call9', [CallArticleController::class, 'call9'])->name('call9');
 Route::post('/call0', [CallArticleController::class, 'call0'])->name('call0');
 
+
+//article2
+Route::controller(Article2Controller::class)->group(function () {
+    Route::get('/article11', 'index1');
+    Route::get('/article12', 'index2');
+    Route::get('/article13', 'index3');
+    Route::get('/article14', 'index4');
+    Route::get('/article15', 'index5');
+    Route::get('/article16', 'index6');
+    Route::get('/article17', 'index7');
+    Route::get('/article18', 'index8');
+});
+
+//callback article2
+Route::post('/call10', [CallArticle2Controller::class, 'call0'])->name('call10');
+Route::post('/call11', [CallArticle2Controller::class, 'call1'])->name('call11');
+Route::post('/call12', [CallArticle2Controller::class, 'call2'])->name('call12');
+Route::post('/call13', [CallArticle2Controller::class, 'call3'])->name('call13');
+Route::post('/call14', [CallArticle2Controller::class, 'call4'])->name('call14');
+Route::post('/call15', [CallArticle2Controller::class, 'call5'])->name('call15');
+Route::post('/call16', [CallArticle2Controller::class, 'call6'])->name('call16');
+Route::post('/call17', [CallArticle2Controller::class, 'call7'])->name('call17');
+Route::post('/call18', [CallArticle2Controller::class, 'call8'])->name('call18');
 
 Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
 

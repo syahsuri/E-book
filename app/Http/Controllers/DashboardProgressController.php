@@ -19,6 +19,7 @@ class DashboardProgressController extends Controller
     {
         return view('dashboard.materi2.index', [
             'title' => 'Materi 2',
+            'users' => User::all()
         ]);
     }
 }

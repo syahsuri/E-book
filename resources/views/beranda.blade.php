@@ -17,7 +17,7 @@
                 <div class="row d-flex">
                     <div class="col">
                     <p class="fw-bolder">STATISTIC</p>
-                    <p>Penyajian Data</p>
+                    <p>Penyajian Data Kualitatif</p>
                     </div>
                     <div class="col p-4 ">
                         <form action="{{ route('call0') }}" method="post">
@@ -28,8 +28,25 @@
                 </div>
             </div>
         </div>
+    </div>
 
-
+    <div class="container mt-5 mb-5">
+        <div class="card mt-5 mb-5">
+            <div class="card-body">
+                <div class="row d-flex">
+                    <div class="col">
+                    <p class="fw-bolder">STATISTIC</p>
+                    <p>Penyajian Data Variabel Kuantitatif : Stemplot</p>
+                    </div>
+                    <div class="col p-4 ">
+                        <form action="{{ route('call10') }}" method="post">
+                            @csrf
+                            <button type="submit" class ="btn btn-pelajari float-end">Pelajari</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 @endsection

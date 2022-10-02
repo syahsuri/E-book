@@ -2,6 +2,17 @@
     font-family: 'calibri';
 }
 
+.btn-kuantatif{
+    margin-top: 13px;
+    width: 100px;
+    margin-right: 15px;
+    margin-left: -15px;
+}
+
+.btn-kuantatif:active{
+    border-radius: none;
+    border: none;
+}
 
 .ul{
     justify-content: space-between;

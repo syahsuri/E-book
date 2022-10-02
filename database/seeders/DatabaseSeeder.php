@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Article;
+use App\Models\Article2;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -44,6 +45,34 @@ class DatabaseSeeder extends Seeder
         Article::create([
             'nama_article' => 'Congratulation',
         ]);
+
+        
+        Article2::create([
+            'nama_article' => 'Penyajian data variabel kuantitatif',
+        ]);
+        Article2::create([
+            'nama_article' => 'Stemplot',
+        ]);
+        Article2::create([
+            'nama_article' => 'Pojok Latihan',
+        ]);
+        Article2::create([
+            'nama_article' => 'Materi Tingkat Lanjut (Advanced)',
+        ]);
+        Article2::create([
+            'nama_article' => 'Quiz1',
+        ]);
+        Article2::create([
+            'nama_article' => 'Quiz2',
+        ]);
+        Article2::create([
+            'nama_article' => 'Quiz3',
+        ]);
+        Article2::create([
+            'nama_article' => 'Congratulation',
+        ]);
+
+  
 
         User::create([
             'nama' => 'Alvin Syahri',
