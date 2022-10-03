@@ -34,7 +34,7 @@
     <hr>
     <ul class=" ul d-flex">
         <li class="li">
-            <form action="{{ route('call6') }}" method="post">
+            <form action="{{ route('call14') }}" method="post">
                 @csrf
                 <button type="submit" class="dropdown-item submit">
                     <i class="bi bi-chevron-left"></i>{{ $articles[4]->nama_article }}
@@ -68,9 +68,7 @@
                 confirmButtonText: 'OK'
             })
         })
-
     }
-
     const buttonb = document.querySelectorAll('#benar');
     for (const button of buttonb) {
         button.addEventListener('click', function() {
@@ -81,7 +79,6 @@
                 confirmButtonText: 'OK'
             })
         })
-
     }
 </script>
 

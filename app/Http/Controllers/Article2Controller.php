@@ -43,7 +43,7 @@ class Article2Controller extends Controller
     public function index5()
     {
         return view('article2.quiz1', [
-            'title' => 'Quiz1',
+            'title' => 'Quiz',
             'articles' => Article2::all()
         ]);
     }
@@ -51,7 +51,7 @@ class Article2Controller extends Controller
     public function index6()
     {
         return view('article2.quiz2', [
-            'title' => 'Quiz2',
+            'title' => 'Quiz',
             'articles' => Article2::all()
         ]);
     }
@@ -63,6 +63,7 @@ class Article2Controller extends Controller
             'articles' => Article2::all()
         ]);
     }
+
     public function index8()
     {
         return view('article2.6', [

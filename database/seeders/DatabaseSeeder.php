@@ -60,13 +60,7 @@ class DatabaseSeeder extends Seeder
             'nama_article' => 'Materi Tingkat Lanjut (Advanced)',
         ]);
         Article2::create([
-            'nama_article' => 'Quiz1',
-        ]);
-        Article2::create([
-            'nama_article' => 'Quiz2',
-        ]);
-        Article2::create([
-            'nama_article' => 'Quiz3',
+            'nama_article' => 'Quiz',
         ]);
         Article2::create([
             'nama_article' => 'Congratulation',

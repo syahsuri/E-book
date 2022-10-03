@@ -24,7 +24,7 @@
         <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
             <label class="form-check-label" for="flexRadioDefault2">
-                <p>a . distribusi data yang berjumlah banyak</p>
+                <p>b . distribusi data yang berjumlah banyak</p>
             </label>
         </div>
         <button type="button" class="btn btn-primary" id="cekjawaban">Check Jawaban</button>
@@ -35,7 +35,7 @@
     <hr>
     <ul class=" ul d-flex">
         <li class="li">
-            <form action="{{ route('call6') }}" method="post">
+            <form action="{{ route('call13') }}" method="post">
                 @csrf
                 <button type="submit" class="dropdown-item submit">
                     <i class="bi bi-chevron-left"></i>{{ $articles[3]->nama_article }}
@@ -69,9 +69,7 @@
                 confirmButtonText: 'OK'
             })
         })
-
     }
-
     const buttonb = document.querySelectorAll('#benar');
     for (const button of buttonb) {
         button.addEventListener('click', function() {
@@ -82,7 +80,6 @@
                 confirmButtonText: 'OK'
             })
         })
-
     }
 </script>
 

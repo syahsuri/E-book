@@ -174,7 +174,6 @@ class CallArticle2Controller extends Controller
         }
         return redirect('/article17');
     }
-
     public function call7(Request $request)
     {
         $materi2 = intval($request->materi2);
@@ -198,5 +197,5 @@ class CallArticle2Controller extends Controller
         }
         return redirect('/article18');
     }
-
+    
 }

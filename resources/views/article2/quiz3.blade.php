@@ -43,7 +43,7 @@
         </li>
         <li class="li fw-bolder b"> {{ $articles[6]->nama_article }} </li>
         <li class="li">
-            <form action="{{ route('call8') }}" method="post">
+            <form action="{{ route('call15') }}" method="post">
                 @csrf
                 <input type="hidden" name="id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="materi" value="{{ auth()->user()->materi2 }}">
@@ -68,9 +68,7 @@
                 confirmButtonText: 'OK'
             })
         })
-
     }
-
     const buttonb = document.querySelectorAll('#benar');
     for (const button of buttonb) {
         button.addEventListener('click', function() {
@@ -81,9 +79,7 @@
                 confirmButtonText: 'OK'
             })
         })
-
     }
-
     
 </script>
 

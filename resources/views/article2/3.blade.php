@@ -50,8 +50,189 @@
                 </tr>
             </thead>
         </table>
-    <p>Sebagai alternatif,<a href="https://www.statology.org/stem-and-leaf-plot-generator/"> https://www.statology.org/stem-and-leaf-plot-generator/ </a>dapat digunakan untuk membuat stemplot sederhana.</p>
-            <br>
+        <p>Sebagai alternatif,<a href="https://www.statology.org/stem-and-leaf-plot-generator/">
+                https://www.statology.org/stem-and-leaf-plot-generator/ </a>dapat digunakan untuk membuat stemplot
+            sederhana.</p>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Note</button>
+        <hr>
+        <p><span class="fw-bold"> Catatan: Tidak semua data sesuai ditampilkan dengan menggunakan stemplot</span>
+            Suatu data sesuai atau tidak ditampilkan dengan stemplot tergantung pada apakah data tersebut dapat
+            dibulatkan tanpa menghilangkan informasi penting yang ada dalam data.
+        </p>
+        <p>Memutuskan jenis grafik apa yang sesuai untuk menampilkan data memerlukan pertimbangan yang tepat. Statistik
+            bukan sekedar resep!</p>
+        <br>
+
+        <h1 class="fw-bold">Pojok Latihan</h1>
+        <p><span class="fw-bold">Jarak tempuh ke Kota Banda Aceh. </span>Provinsi Aceh memiliki 23 Kota/Kabupaten dengan
+            Ibukota Provinsi
+            bernama Kota Banda Aceh yang terletak di ujung barat Pulau Sumatera. Provinsi ini memiliki luas 58.377 KM2
+            yang terbentang dari Kota Sabang di Pulau Weh sampai
+            ke Kabupaten Aceh Tamiang yang berbatasan dengan Provinsi Sumatera Utara.
+            Jarak tempuh setiap kabupaten/kota tersebut dengan Kota Banda Aceh ditampilkan pada Tabel 2. </p>
+        <p>Tabel 2. Data jarak tempuh (km) dari kota/kabupaten di Provinsi Aceh dengan Kota Banda Aceh</p>
+
+        <table class="table table-dark table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>Nama Daerah</th>
+                    <th>Jarak(KM)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <th>Kabupaten Sigli</th>
+                    <th>112,1</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>Kabupaten Pidie Jaya</th>
+                    <th>172,2</th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>Kabupaten Bireuen</th>
+                    <th>220,1</th>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <th>Kabupaten Aceh Utara</th>
+                    <th>305,2</th>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <th>Kota Lhokseumawe</th>
+                    <th>274,3</th>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <th>Kabupaten Aceh Timur</th>
+                    <th>429,5</th>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <th>Kota Langsa</th>
+                    <th>425,1</th>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <th>Kabupaten Aceh Tamiang</th>
+                    <th>470,0</th>
+                </tr>
+                <tr>
+                    <th>9</th>
+                    <th>Kabupaten Aceh Jaya</th>
+                    <th>160,7</th>
+                </tr>
+                <tr>
+                    <th>10</th>
+                    <th>Kabupaten Aceh Barat</th>
+                    <th>239,7</th>
+                </tr>
+                <tr>
+                    <th>11</th>
+                    <th>Kabupaten Nagan Raya</th>
+                    <th>296,8</th>
+                </tr>
+                <tr>
+                    <th>12</th>
+                    <th>Kabupaten Aceh Selatan</th>
+                    <th>434,1</th>
+                </tr>
+                <tr>
+                    <th>13</th>
+                    <th>Kabupaten Aceh Tengah</th>
+                    <th>316,1</th>
+                </tr>
+                <tr>
+                    <th>14</th>
+                    <th>Kabupaten Gayo Lues</th>
+                    <th>451,7</th>
+                </tr>
+                <tr>
+                    <th>15</th>
+                    <th>Kabupaten Singkil</th>
+                    <th>639,6</th>
+                </tr>
+                <tr>
+                    <th>16</th>
+                    <th>Kabupaten Aceh Tenggara</th>
+                    <th>550,7</th>
+                </tr>
+                <tr>
+                    <th>17</th>
+                    <th>Kabupaten Subulussalam</th>
+                    <th>579,6</th>
+                </tr>
+                <tr>
+                    <th>18</th>
+                    <th>Kabupaten Aceh Besar</th>
+                    <th>53,1</th>
+                </tr>
+                <tr>
+                    <th>19</th>
+                    <th>Kabupaten Aceh Barat Daya</th>
+                    <th>270,0</th>
+                </tr>
+                <tr>
+                    <th>20</th>
+                    <th>Kabupaten Bener Meriah</th>
+                    <th>317,9</th>
+                </tr>
+                <tr>
+                    <th>21</th>
+                    <th>Kabupaten Simeulue</th>
+                    <th>332,0</th>
+                </tr>
+                <tr>
+                    <th>22</th>
+                    <th>Kota Sabang</th>
+                    <th>38,3</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="text-center fs-5">Sumber data: Google Map 2022</p>
+
+        <p>Pertanyaan interaktif: </p>
+        <ol class="fs-3">
+            <li>Jarak tempuh Kota Sigli ke Banda Aceh diketahui adalah 112,1 KM. Jika data tersebut ditampilkan dalam
+                grafik stemplot,
+                angka apa yang akan dijadikan batang? <input type="number" size="5">
+                 Angka apa yang akan dijadikan daun? <input type="number" size="5">
+            </li>
+            <li>Jika data jarak tempuh tersebut dibulatkan dalam desimal terdekat (misalnya 112,1 menjadi 112 dan 451,7
+                menjadi 452),
+                apakah menurutmu data tersebut akan sesuai ditampilkan dengan menggunakan stemplot? Mengapa? <textarea> </textarea></li>
+        </ol>
+
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Catatan</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Untuk membuat stemplot, pastikan yang menjadi bagian daun adalah digit terakhir dari data.
+                        </p>
+                        <ul class="fs-3">
+                            <li>Jika data lebih dari 2 digit maka dua digit pertama menjadi batang dan satu digit
+                                terakhir menjadi daun;</li>
+                            <li>Jika data berbentuk desimal, maka digit terakhir setelah koma menjadi daun dan digit
+                                yang sebelumnya menjadi batang</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </article>
 </div>
 
