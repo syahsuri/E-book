@@ -12,18 +12,18 @@
 <div class="container pt-3 pb-3">
     <article class="p-5">
         <h1 class="fw-bold">Quiz</h1>
-        <h3>2 . Stemplot sesuai untuk membandingkan dua kelompok data</h3>
+        <h3>2. Stemplot sesuai untuk membandingkan dua kelompok data</h3>
         <form action="" class="ms-5">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
                 <label class="form-check-label" for="flexRadioDefault1">
-                    <p>a . benar </p>
+                    <p>a. Benar </p>
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
                 <label class="form-check-label" for="flexRadioDefault2">
-                    <p>b . Salah </p>
+                    <p>b. Salah </p>
                 </label>
             </div>
             <button type="button" class="btn btn-primary" id="cekjawaban">Check Jawaban</button>

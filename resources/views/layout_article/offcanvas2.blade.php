@@ -14,7 +14,7 @@
                     $i = 10;
                 @endphp
                 @foreach ($articles as $article)
-                    @if ($article->id === 7)
+                    @if ($article->id === 8)
                     @else
                         @if (auth()->user()->materi2 + 1 >= $article->id)
                             <form action="{{ route('call' . $i) }}" method="post">

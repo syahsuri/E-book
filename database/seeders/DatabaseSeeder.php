@@ -63,6 +63,12 @@ class DatabaseSeeder extends Seeder
             'nama_article' => 'Quiz',
         ]);
         Article2::create([
+            'nama_article' => 'Quiz2',
+        ]);
+        Article2::create([
+            'nama_article' => 'Quiz3',
+        ]);
+        Article2::create([
             'nama_article' => 'Congratulation',
         ]);
 
