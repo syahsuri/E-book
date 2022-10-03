@@ -25,7 +25,7 @@
                                     <td>{{ $user->nama }}</td>
                                     <td>
                                         @php
-                                            $value = intval((100 / 6) * $user->materi2);
+                                            $value = intval((100 / 7) * $user->materi2);
                                         @endphp
                                         <div class="progress">
                                             <div class="progress-bar bg-info" role="progressbar"
