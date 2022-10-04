@@ -211,7 +211,7 @@
             </tbody>
         </table>
 
-        <p>Dari stemplot yang dihasilkan maka dapat dilihat perbandingan sebaran
+        <p>Dari stemplot yang dihasilkan maka dapat dilihat perbandingan sebaran 
             jumlah ayat dari surah-surah yang ada pada juz 28 dan juz 29. Beberapa diantaranya adalah sebagai berikut:</p>
 
             <ul class="fs-4">
@@ -243,7 +243,7 @@
                 @csrf
                 <input type="hidden" name="id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="materi" value="{{ auth()->user()->materi2 }}">
-                <input type="hidden" name="materi2" value="{{ $articles[3]->id }}">
+                <input type="hidden" name="materi1" value="{{ $articles[3]->id }}">
                 <button type="submit" class="dropdown-item b">
                     {{ $articles[4]->nama_article }} <i class="bi bi-chevron-right"></i>
                 </button>
