@@ -243,9 +243,9 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Variabel kuantitatif merupakan variabel yang diukur dalam bentuk skala numerik.
+                        <p>Variabel kuantitatif merupakan variabel yang diukur dalam bentuk skala numerik. 
                             Contohnya Tinggi, berat, temperatur, dan skor ujian. </p>
-                        <p>Variabel kuantitatif berbeda dengan variabel kategori (kualitatif) seperti warna favorit,
+                        <p>Variabel kuantitatif berbeda dengan variabel kategori (kualitatif) seperti warna favorit, 
                             agama, tempat lahir, dimana tidak ada pengurutan atau pengukuran yang terlibat </p>
                     </div>
                     <div class="modal-footer">
@@ -267,7 +267,7 @@
                 @csrf
                 <input type="hidden" name="id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="materi" value="{{ auth()->user()->materi2 }}">
-                <input type="hidden" name="materi2" value="{{ $articles[0]->id }}">
+                <input type="hidden" name="materi1" value="{{ $articles[0]->id }}">
                 <button type="submit" class="dropdown-item b">
                     {{ $articles[1]->nama_article }} <i class="bi bi-chevron-right"></i>
                 </button>

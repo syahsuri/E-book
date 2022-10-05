@@ -17,22 +17,22 @@
         <h1 class="fw-bold">Stemplot</h1>
         <p>Stemplot disebut juga dengan stem-and-leaf plot (diagram batang dan daun), karena terdiri dari
             bagian yang disebut batang dan bagian yang disebut daun. Grafik ini menampilkan gambaran ringkas
-            tentang bentuk distribusi data dengan menggunakan nilai data yang sebenarnya.
+            tentang bentuk distribusi data dengan menggunakan nilai data yang sebenarnya. 
             Grafik ini paling sesuai untuk
             jumlah data yang tidak terlalu banyak.
         </p>
-        <p><span class="fw-bold">Contoh 2.1 Stemplot untuk data jumlah ayat dari surah pada Juz 30.</span> Untuk dapat membuat stemplot
-            untuk data pada Tabel 1, gunakan digit pertama data sebagai batang dan digit kedua sebagai daun.
+        <p><span class="fw-bold">Contoh 2.1 Stemplot untuk data jumlah ayat dari surah pada Juz 30.</span> Untuk dapat membuat stemplot 
+            untuk data pada Tabel 1, gunakan digit pertama data sebagai batang dan digit kedua sebagai daun. 
             Gambar 2.3 memperlihatkan langkah-langkah membuat stemplot.</p>
         <p class="text-center fs-5"><b>digital: </b>langkah penyusunan stemplot secara manual dibuat dalam bentuk video</p>
         <img src="img/materi2/stemplot.png" alt="" class="d-block m-auto">
-        <p class="mt-4"><span class="fw-bold">Gambar 1</span>  Pembuatan stemplot untuk data pada Contoh 1. (a) Menyusun batang. (b) Menuliskan nilai daun pada
-            setiap batang yang sesuai. Contohnya, nilai untuk batang 6 adalah 65, 60, dan 68, sehingga daun untuk batang 6
-            adalah 5, 0, dan 8. (c) Mengurutkan nilai
+        <p class="mt-4"><span class="fw-bold">Gambar 1</span>  Pembuatan stemplot untuk data pada Contoh 1. (a) Menyusun batang. (b) Menuliskan nilai daun pada 
+            setiap batang yang sesuai. Contohnya, nilai untuk batang 6 adalah 65, 60, dan 68, sehingga daun untuk batang 6 
+            adalah 5, 0, dan 8. (c) Mengurutkan nilai 
             daun pada setiap batang dari nilai terkecil. Nilai daun pada batang 6 diurutkan menjadi 0, 5, dan 8.</p>
         <h3 class="fw-bold mt-5">Apa yang digambarkan oleh stemplot?</h3>
-        <p>Dari Gambar 1 dapat dilihat bahwa jumlah ayat yang paling sedikit adalah 3 ayat yang dimiliki oleh 3 surah,
-            muncul pada batang pertama, yaitu batang 0 dengan nilai daun 3.
+        <p>Dari Gambar 1 dapat dilihat bahwa jumlah ayat yang paling sedikit adalah 3 ayat yang dimiliki oleh 3 surah, 
+            muncul pada batang pertama, yaitu batang 0 dengan nilai daun 3. 
             Sementara jumlah ayat yang paling banyak adalah 46 yang muncul pada batang 4 dengan nilai daun 6. </p>
         <p>Salah satu tujuan stemplot adalah untuk menggambarkan bentuk distribusi data.</p>
         <ul class="fs-3">
@@ -70,7 +70,7 @@
                 @csrf
                 <input type="hidden" name="id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="materi" value="{{ auth()->user()->materi2 }}">
-                <input type="hidden" name="materi2" value="{{ $articles[1]->id }}">
+                <input type="hidden" name="materi1" value="{{ $articles[1]->id }}">
                 <button type="submit" class="dropdown-item b">
                     {{ $articles[2]->nama_article }} <i class="bi bi-chevron-right"></i>
                 </button>

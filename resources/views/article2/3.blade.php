@@ -254,7 +254,7 @@
                 @csrf
                 <input type="hidden" name="id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="materi" value="{{ auth()->user()->materi2 }}">
-                <input type="hidden" name="materi2" value="{{ $articles[2]->id }}">
+                <input type="hidden" name="materi1" value="{{ $articles[2]->id }}">
                 <button type="submit" class="dropdown-item b">
                     {{ $articles[3]->nama_article }} <i class="bi bi-chevron-right"></i>
                 </button>
