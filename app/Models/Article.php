@@ -13,4 +13,9 @@ class Article extends Model
         'id'
     ];
 
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
+
 }

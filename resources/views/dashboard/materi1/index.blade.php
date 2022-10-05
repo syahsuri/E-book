@@ -14,6 +14,7 @@
                                 <th>#</th>
                                 <th>NIM</th>
                                 <th>Nama</th>
+                                <th>Judul Terakhir</th>
                                 <th>Persentase</th>
                             </tr>
                         </thead>
@@ -23,6 +24,16 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $user->nim }}</td>
                                     <td>{{ $user->nama }}</td>
+                                    <td>
+                                        @php
+                                            if($user->materi1 == 0){
+                                                $judul = "-";
+                                            }else{
+                                                $judul = $user->article->nama_article;
+                                            }
+                                            echo $judul;
+                                        @endphp
+                                    </td>
                                     <td>
                                         @php
                                             $value = intval((100 / 8) * $user->materi1);

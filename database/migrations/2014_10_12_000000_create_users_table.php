@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('nim')->unique();
             $table->string('password');
             $table->integer('role')->default(0);
-            $table->integer('materi1')->default(1);
-            $table->integer('materi2')->default(0);
+            $table->foreignId('materi1')->default(1);
+            $table->foreignId('materi2')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

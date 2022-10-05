@@ -46,4 +46,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function article()
+    {
+        return $this->belongsTo(Article::class, 'materi1');
+    }
+
+    public function article2()
+    {
+        return $this->belongsTo(Article2::class, 'materi2');
+    }
 }

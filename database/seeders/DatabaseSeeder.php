@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
             'nama_article' => 'Congratulation',
         ]);
 
-        
+
         Article2::create([
             'nama_article' => 'Penyajian data variabel kuantitatif',
         ]);
@@ -60,7 +60,7 @@ class DatabaseSeeder extends Seeder
             'nama_article' => 'Materi Tingkat Lanjut (Advanced)',
         ]);
         Article2::create([
-            'nama_article' => 'Quiz',
+            'nama_article' => 'Quiz1',
         ]);
         Article2::create([
             'nama_article' => 'Quiz2',
@@ -72,7 +72,7 @@ class DatabaseSeeder extends Seeder
             'nama_article' => 'Congratulation',
         ]);
 
-  
+
 
         User::create([
             'nama' => 'Alvin Syahri',
