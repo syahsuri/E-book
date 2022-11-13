@@ -26,7 +26,6 @@ class CallArticle2Controller extends Controller
 
                 return redirect('/article11');
             }
-
         }
         return redirect('/article11');
     }
@@ -197,5 +196,5 @@ class CallArticle2Controller extends Controller
         }
         return redirect('/article18');
     }
-    
+
 }

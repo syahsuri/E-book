@@ -73,7 +73,7 @@ Route::post('/call16', [CallArticle2Controller::class, 'call6'])->name('call16')
 Route::post('/call17', [CallArticle2Controller::class, 'call7'])->name('call17');
 Route::post('/call18', [CallArticle2Controller::class, 'call8'])->name('call18');
 
-Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
+Route::get('/', [BerandaController::class, 'index']);
 
 // Dashboard
 Route::prefix('/dashboard')->group(function () {
@@ -93,7 +93,7 @@ Route::controller(RegisterController::class)->group(function () {
 });
 
 Route::controller(LoginController::class)->group(function () {
-    Route::get('/', 'index')->middleware('guest');
+    Route::get('/login', 'index')->middleware('guest');
     Route::post('/login', 'authenticate');
     Route::post('/logout', 'logout');
 });

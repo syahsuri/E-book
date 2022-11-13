@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 
 class BerandaController extends Controller
 {
@@ -14,8 +15,18 @@ class BerandaController extends Controller
      */
     public function index()
     {
-        return view('beranda', [
-            'title' => 'Tanyo Muruno | Beranda',
-        ]);
+        if(FacadesAuth::guest()){
+            return redirect('/login');
+        }
+        else{
+            return view('index', [
+                'title' => 'Tanyo Muruno | Beranda',
+            ]);
+        }
+    }
+
+    public function login()
+    {
+        return redirect('/login');
     }
 }
